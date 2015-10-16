@@ -24,6 +24,7 @@
 		17F97ACD1B126FC80045633E /* cancel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 17F97ACA1B126FC80045633E /* cancel@3x.png */; };
 		17FD4ECB1B1B930A009166E7 /* LLAddLayerCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FD4ECA1B1B930A009166E7 /* LLAddLayerCommand.m */; };
 		17FD4ED11B1BB248009166E7 /* LLAddAudioCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FD4ED01B1BB248009166E7 /* LLAddAudioCommand.m */; };
+		422965921BD0D96B00DC5CDD /* LLMirrorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 422965911BD0D96B00DC5CDD /* LLMirrorCommand.m */; settings = {ASSET_TAGS = (); }; };
 		662FA662166554732FC2D5D7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA7530E0A8255DB47DA9A9E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		17FD4ECF1B1BB248009166E7 /* LLAddAudioCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLAddAudioCommand.h; sourceTree = "<group>"; };
 		17FD4ED01B1BB248009166E7 /* LLAddAudioCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLAddAudioCommand.m; sourceTree = "<group>"; };
 		242DAA5169A01C87AE015614 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		422965901BD0D96B00DC5CDD /* LLMirrorCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLMirrorCommand.h; sourceTree = "<group>"; };
+		422965911BD0D96B00DC5CDD /* LLMirrorCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLMirrorCommand.m; sourceTree = "<group>"; };
 		6CA7530E0A8255DB47DA9A9E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6EEE3EF13A06B178AE2A9D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +168,8 @@
 				17FD4ECA1B1B930A009166E7 /* LLAddLayerCommand.m */,
 				17FD4ECF1B1BB248009166E7 /* LLAddAudioCommand.h */,
 				17FD4ED01B1BB248009166E7 /* LLAddAudioCommand.m */,
+				422965901BD0D96B00DC5CDD /* LLMirrorCommand.h */,
+				422965911BD0D96B00DC5CDD /* LLMirrorCommand.m */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -363,6 +368,7 @@
 				17F97ABF1B125B850045633E /* LLVideoEditor.m in Sources */,
 				170030AF1B11F5A200585CEB /* AppDelegate.m in Sources */,
 				170030AC1B11F5A200585CEB /* main.m in Sources */,
+				422965921BD0D96B00DC5CDD /* LLMirrorCommand.m in Sources */,
 				17FD4ED11B1BB248009166E7 /* LLAddAudioCommand.m in Sources */,
 				17F97AC21B12604D0045633E /* HomeViewController.m in Sources */,
 				17FD4ECB1B1B930A009166E7 /* LLAddLayerCommand.m in Sources */,
