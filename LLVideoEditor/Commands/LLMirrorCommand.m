@@ -29,7 +29,9 @@
     AVMutableVideoCompositionLayerInstruction *layerInstruction = nil;
     
     CGAffineTransform t1 = CGAffineTransformMakeTranslation(videoSize.height, 0.0);
-    CGAffineTransform t2 = CGAffineTransformScale(t1, -1.0, 1.0);
+    CGAffineTransform t3 = CGAffineTransformRotate(t1, ( 90.0 ) / 180.0 * M_PI );
+    CGAffineTransform t4 = CGAffineTransformScale(t1, -1.0, 1.0);
+    CGAffineTransform t2 = CGAffineTransformConcat(t3, t4);
     videoSize = CGSizeMake(videoSize.height, videoSize.width);
     
     CMTime duration = self.videoData.videoCompositionTrack.timeRange.duration;

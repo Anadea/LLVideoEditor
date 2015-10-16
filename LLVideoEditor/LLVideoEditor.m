@@ -58,9 +58,22 @@
     }
 }
 
-- (void)makeMirror {
-    LLMirrorCommand *command = [[LLMirrorCommand alloc] initWithVideoData:self.videoData];
-    [self.commands addObject:command];
+- (void)makeMirrorWithRotate:(LLRotateDegree)rotateDegree {
+    NSInteger commandCount = 0;
+    if(rotateDegree == LLRotateDegree90) {
+        commandCount = 1;
+    }
+    else if(rotateDegree == LLRotateDegree180) {
+        commandCount = 2;
+    }
+    else if(rotateDegree == LLRotateDegree270) {
+        commandCount = 3;
+    }
+    
+    for(NSInteger i = 0; i<commandCount; i++) {
+        LLMirrorCommand *command = [[LLMirrorCommand alloc] initWithVideoData:self.videoData];
+        [self.commands addObject:command];
+    }
 }
 
 - (void)crop:(CGRect)cropFrame {

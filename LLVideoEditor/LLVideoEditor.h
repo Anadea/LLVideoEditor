@@ -36,7 +36,7 @@ typedef enum : NSUInteger {
 /**
  * Make mirror from video.
  */
-- (void)makeMirror;
+- (void)makeMirrorWithRotate:(LLRotateDegree)rotateDegree;
 
 /**
  * Add a layer (watermark) to the video.
