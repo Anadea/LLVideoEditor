@@ -10,12 +10,14 @@
 @import AVFoundation;
 @interface LLMirrorCommand()
 @property (weak, nonatomic) LLVideoData *videoData;
+@property BOOL needRotate;
 @end
 @implementation LLMirrorCommand
-- (instancetype)initWithVideoData:(LLVideoData *)videoData {
+- (instancetype)initWithVideoData:(LLVideoData *)videoData needRotate:(BOOL)needRotate {
     self = [super init];
     if(self) {
         _videoData = videoData;
+        _needRotate = needRotate;
     }
     
     return self;
@@ -29,9 +31,9 @@
     AVMutableVideoCompositionLayerInstruction *layerInstruction = nil;
     
     CGAffineTransform t1 = CGAffineTransformMakeTranslation(videoSize.height, 0.0);
-    CGAffineTransform t3 = CGAffineTransformRotate(t1, ( 90.0 ) / 180.0 * M_PI );
     CGAffineTransform t4 = CGAffineTransformScale(t1, -1.0, 1.0);
-    CGAffineTransform t2 = CGAffineTransformConcat(t3, t4);
+    CGAffineTransform t2 = (self.needRotate) ? CGAffineTransformConcat(CGAffineTransformRotate(t1, ( 90.0 ) / 180.0 * M_PI ), t4) : t4;
+    
     videoSize = CGSizeMake(videoSize.height, videoSize.width);
     
     CMTime duration = self.videoData.videoCompositionTrack.timeRange.duration;

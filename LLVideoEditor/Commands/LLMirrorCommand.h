@@ -14,5 +14,5 @@
 // disable the basic initializer
 - (instancetype)init NS_UNAVAILABLE;
 // default initializer
-- (instancetype)initWithVideoData:(LLVideoData *)videoData;
+- (instancetype)initWithVideoData:(LLVideoData *)videoData needRotate:(BOOL)needRotate;
 @end

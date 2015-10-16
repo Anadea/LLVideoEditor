@@ -75,10 +75,15 @@
         if (i < commandCount - 1) {
             command = [[LLRotateCommand alloc] initWithVideoData:self.videoData];
         } else {
-            command = [[LLMirrorCommand alloc] initWithVideoData:self.videoData];
+            command = [[LLMirrorCommand alloc] initWithVideoData:self.videoData needRotate:YES];
         }
         [self.commands addObject:command];
     }
+}
+
+- (void)makeMirror
+{
+    [self.commands addObject:[[LLMirrorCommand alloc] initWithVideoData:self.videoData needRotate:NO]];
 }
 
 - (void)crop:(CGRect)cropFrame {
