@@ -15,6 +15,7 @@
 #import "LLRotateCommand.h"
 #import "LLAddLayerCommand.h"
 #import "LLAddAudioCommand.h"
+#import "LLMirrorCommand.h"
 
 @interface LLVideoEditor()
 @property (strong, nonatomic) LLVideoData *videoData;
@@ -55,6 +56,11 @@
         LLRotateCommand *command = [[LLRotateCommand alloc] initWithVideoData:self.videoData];
         [self.commands addObject:command];
     }
+}
+
+- (void)makeMirror {
+    LLMirrorCommand *command = [[LLMirrorCommand alloc] initWithVideoData:self.videoData];
+    [self.commands addObject:command];
 }
 
 - (void)crop:(CGRect)cropFrame {
