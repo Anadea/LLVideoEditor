@@ -71,7 +71,12 @@
     }
     
     for(NSInteger i = 0; i<commandCount; i++) {
-        LLMirrorCommand *command = [[LLMirrorCommand alloc] initWithVideoData:self.videoData];
+        id command;
+        if (i < commandCount - 1) {
+            command = [[LLRotateCommand alloc] initWithVideoData:self.videoData];
+        } else {
+            command = [[LLMirrorCommand alloc] initWithVideoData:self.videoData];
+        }
         [self.commands addObject:command];
     }
 }
