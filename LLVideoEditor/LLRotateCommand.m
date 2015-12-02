@@ -51,8 +51,12 @@
     }
     else {
         // Extract the existing layer instruction on the mutableVideoComposition
-        instruction = [self.videoData.videoComposition.instructions lastObject];
-        layerInstruction = [instruction.layerInstructions lastObject];
+        if (self.videoData.videoComposition.instructions.count > 0) {
+            instruction = (AVMutableVideoCompositionInstruction *)[self.videoData.videoComposition.instructions lastObject];
+        }
+        if (instruction.layerInstructions.count > 0) {
+            layerInstruction = (AVMutableVideoCompositionLayerInstruction *)[instruction.layerInstructions lastObject];
+        }
         
         CGAffineTransform existingTransform;
         
