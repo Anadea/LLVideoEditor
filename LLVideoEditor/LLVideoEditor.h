@@ -89,4 +89,9 @@ typedef enum : NSUInteger {
  */
 @property (nonatomic, readonly) CGSize videoSize;
 
+/**
+ * Cancel the exporting of the edited video.
+ */
+- (void)cancelExport;
+
 @end

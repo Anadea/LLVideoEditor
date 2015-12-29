@@ -180,4 +180,9 @@
     }];
 }
 
+- (void)cancelExport {
+    if (self.exportSession && self.exportSession.status == AVAssetExportSessionStatusExporting) {
+        [self.exportSession cancelExport];
+    }
+}
 @end
