@@ -92,6 +92,6 @@ typedef enum : NSUInteger {
 /**
  * Cancel the exporting of the edited video.
  */
-- (void)cancelExport;
+- (void)cancel;
 
 @end
